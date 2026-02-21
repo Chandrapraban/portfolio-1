@@ -49,8 +49,8 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center gap-2.5 group"
           >
-            <div className="w-8 h-8 rounded-full border border-zinc-700 overflow-hidden shadow-lg shadow-black/40">
-              <img src="/profile pic.png" alt="Chandrapraban" className="w-full h-full object-cover" />
+            <div className="w-8 h-8 rounded-lg overflow-hidden shadow-lg shadow-black/40">
+              <img src="/favicon.jpg" alt="Chandrapraban" className="w-full h-full object-cover" />
             </div>
             <span className="font-bold text-zinc-100 group-hover:text-white transition-colors duration-200">
               Chandrapraban

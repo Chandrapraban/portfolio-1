@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <div className="w-28 h-28 rounded-full border-2 border-zinc-700 overflow-hidden shadow-2xl shadow-black/60">
             <img
-              src="/profile pic.png"
+              src="/profile-pic.png"
               alt="Chandrapraban"
               className="w-full h-full object-cover"
             />
@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Bio card */}
         <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 px-5 sm:px-6 py-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm text-left max-w-2xl mx-auto mb-12 shadow-2xl">
           <div className="flex-shrink-0 w-10 h-10 rounded-full border border-zinc-700 overflow-hidden shadow-lg">
-            <img src="/profile pic.png" alt="Chandrapraban" className="w-full h-full object-cover" />
+            <img src="/profile-pic.png" alt="Chandrapraban" className="w-full h-full object-cover" />
           </div>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
             I'm{' '}
