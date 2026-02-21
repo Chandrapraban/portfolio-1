@@ -36,7 +36,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/60 shadow-xl shadow-black/20'
+          ? 'bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/60 shadow-xl shadow-black/20'
           : 'bg-transparent'
       }`}
     >
@@ -90,7 +90,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-zinc-800 transition-colors duration-200"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -105,7 +105,7 @@ export default function Navbar() {
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-slate-950/95 backdrop-blur-md border-t border-slate-800/60 px-4 py-4 space-y-1">
+        <div className="bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800/60 px-4 py-4 space-y-1">
           {NAV_LINKS.map(({ label, href }) => {
             const id = href.replace('#', '')
             const isActive = activeSection === id
@@ -117,7 +117,7 @@ export default function Navbar() {
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   isActive
                     ? 'text-sky-400 bg-sky-500/10'
-                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
                 }`}
               >
                 {label}

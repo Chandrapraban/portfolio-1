@@ -58,7 +58,7 @@ const EDUCATION = [
 function EducationCard({ edu, index }) {
   return (
     <ScrollReveal delay={index * 150}>
-      <div className={`group relative flex flex-col h-full bg-slate-900 border ${edu.borderAccent} rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 hover:-translate-y-1`}>
+      <div className={`group relative flex flex-col h-full bg-zinc-900 border ${edu.borderAccent} rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 hover:-translate-y-1`}>
         {/* Top gradient bar */}
         <div className={`h-1 w-full bg-gradient-to-r ${edu.accent}`} />
 
@@ -75,14 +75,14 @@ function EducationCard({ edu, index }) {
           </div>
 
           {/* Degree & meta */}
-          <div className="mb-6 pb-6 border-b border-slate-800">
+          <div className="mb-6 pb-6 border-b border-zinc-800">
             <p className="text-sky-400 font-semibold text-base mb-3">{edu.degree}</p>
             <div className="flex flex-wrap gap-3">
-              <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-slate-800/60 px-3 py-1.5 rounded-lg">
+              <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-zinc-800/60 px-3 py-1.5 rounded-lg">
                 <GraduationCap size={13} className="text-slate-500" />
                 {edu.period}
               </div>
-              <div className="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-slate-800/60 px-3 py-1.5 rounded-lg font-medium">
+              <div className="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-zinc-800/60 px-3 py-1.5 rounded-lg font-medium">
                 <Award size={13} className="text-sky-400" />
                 GPA {edu.gpa} · {edu.gpaLabel}
               </div>
@@ -101,7 +101,7 @@ function EducationCard({ edu, index }) {
               {edu.coursework.map((course) => (
                 <span
                   key={course}
-                  className="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700/50"
+                  className="text-xs px-2.5 py-1 rounded-full bg-zinc-800 text-slate-300 border border-zinc-700/50"
                 >
                   {course}
                 </span>
@@ -128,12 +128,12 @@ function EducationCard({ edu, index }) {
           </div>
 
           {/* Document buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t border-slate-800">
+          <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t border-zinc-800">
             {edu.docs.map((doc) => (
               <a
                 key={doc.label}
                 href={doc.href}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium border border-slate-700 text-slate-400 hover:text-sky-400 hover:border-sky-500/50 hover:bg-sky-500/5 transition-all duration-200"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium border border-zinc-700 text-slate-400 hover:text-sky-400 hover:border-sky-500/50 hover:bg-sky-500/5 transition-all duration-200"
               >
                 <FileText size={13} />
                 {doc.label}
@@ -148,8 +148,8 @@ function EducationCard({ edu, index }) {
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 sm:py-32 relative bg-slate-950/50">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/30 to-transparent" />
+    <section id="education" className="py-24 sm:py-32 relative bg-zinc-950/50">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/30 to-transparent" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}

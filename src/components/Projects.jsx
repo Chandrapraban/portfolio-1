@@ -56,7 +56,7 @@ const PROJECTS = [
 function ProjectCard({ project, index }) {
   return (
     <ScrollReveal delay={index * 80}>
-      <div className="group relative flex flex-col h-full bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40">
+      <div className="group relative flex flex-col h-full bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40">
         {/* Top accent line */}
         <div className={`absolute top-0 left-6 right-6 h-0.5 rounded-full bg-gradient-to-r ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
@@ -67,7 +67,7 @@ function ProjectCard({ project, index }) {
           </div>
           <ExternalLink
             size={16}
-            className="text-slate-600 group-hover:text-sky-400 transition-colors duration-200 mt-1"
+            className="text-zinc-600 group-hover:text-sky-400 transition-colors duration-200 mt-1"
           />
         </div>
 
@@ -97,7 +97,7 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-32 relative">
-      <div className="absolute inset-0 bg-slate-950" />
+      <div className="absolute inset-0 bg-zinc-950" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}

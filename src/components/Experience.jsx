@@ -81,14 +81,14 @@ function TimelineItem({ exp, index, isLast }) {
           </div>
           {/* Line */}
           {!isLast && (
-            <div className="flex-grow w-px bg-gradient-to-b from-slate-700 to-transparent mt-3" />
+            <div className="flex-grow w-px bg-gradient-to-b from-zinc-700 to-transparent mt-3" />
           )}
         </div>
 
         {/* Right column: content */}
         <div className={`group flex-grow pb-${isLast ? '0' : '12'} sm:pb-${isLast ? '0' : '14'}`}
           style={{ paddingBottom: isLast ? '0' : '3.5rem' }}>
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-7 hover:border-slate-700 transition-all duration-300 hover:shadow-xl hover:shadow-black/30">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 sm:p-7 hover:border-zinc-700 transition-all duration-300 hover:shadow-xl hover:shadow-black/30">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
               <div>
@@ -106,7 +106,7 @@ function TimelineItem({ exp, index, isLast }) {
                 )}
               </div>
               <div className="flex flex-col items-start sm:items-end gap-1 flex-shrink-0">
-                <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-slate-800/70 px-3 py-1.5 rounded-lg">
+                <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-zinc-800/70 px-3 py-1.5 rounded-lg">
                   <Calendar size={12} className="text-slate-500" />
                   {exp.period}
                 </div>
@@ -136,7 +136,7 @@ function TimelineItem({ exp, index, isLast }) {
 export default function Experience() {
   return (
     <section id="experience" className="py-24 sm:py-32 relative">
-      <div className="absolute inset-0 bg-slate-950" />
+      <div className="absolute inset-0 bg-zinc-950" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent to-sky-500/30" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

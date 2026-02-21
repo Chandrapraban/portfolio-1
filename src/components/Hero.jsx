@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-950"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-grid opacity-100" />
@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Availability badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-700/60 text-sm text-slate-400 mb-10 shadow-xl">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-700/60 text-sm text-slate-400 mb-10 shadow-xl">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           Open to opportunities · Available May 2027
         </div>
@@ -45,7 +45,7 @@ export default function Hero() {
         </p>
 
         {/* Bio card */}
-        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 px-5 sm:px-6 py-4 rounded-2xl bg-slate-900/80 border border-slate-700/50 backdrop-blur-sm text-left max-w-2xl mx-auto mb-12 shadow-2xl">
+        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 px-5 sm:px-6 py-4 rounded-2xl bg-zinc-900/80 border border-zinc-700/50 backdrop-blur-sm text-left max-w-2xl mx-auto mb-12 shadow-2xl">
           <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-violet-500 flex items-center justify-center shadow-lg shadow-sky-500/20">
             <Cpu size={18} className="text-white" />
           </div>
