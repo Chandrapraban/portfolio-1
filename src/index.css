@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-sky-500/30 text-sky-200;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-sky-600;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold text-slate-100 mb-2;
+  }
+
+  .section-subheading {
+    @apply text-slate-400 mb-12 text-lg;
+  }
+
+  .card {
+    @apply bg-slate-900 border border-slate-800 rounded-2xl p-6
+           hover:border-sky-500/50 transition-all duration-300;
+  }
+
+  .tag {
+    @apply text-xs font-medium px-2.5 py-1 rounded-full
+           bg-sky-500/10 text-sky-400 border border-sky-500/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           bg-sky-500 hover:bg-sky-400 text-white
+           transition-all duration-200 hover:shadow-lg hover:shadow-sky-500/25
+           hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           border border-slate-700 text-slate-300 hover:text-sky-400
+           hover:border-sky-500/50 hover:bg-sky-500/5
+           transition-all duration-200 hover:-translate-y-0.5;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent;
+  }
+
+  .glow-border {
+    @apply border border-sky-500/0 hover:border-sky-500/50
+           hover:shadow-[0_0_30px_-5px_rgba(14,165,233,0.15)]
+           transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at center top, rgba(14, 165, 233, 0.12) 0%, transparent 60%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline line */
+.timeline-line {
+  background: linear-gradient(to bottom, #0ea5e9, #8b5cf6);
+}
+
+/* Gradient animated border */
+@keyframes borderGradient {
+  0%, 100% { border-color: rgba(14, 165, 233, 0.4); }
+  50% { border-color: rgba(139, 92, 246, 0.4); }
+}
