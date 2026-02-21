@@ -3,46 +3,53 @@ import ScrollReveal from './ScrollReveal'
 
 const PROJECTS = [
   {
-    title: 'AI-Integrated Banking Platform',
+    title: 'AI Banking Platform — Scale & Revenue',
     description:
-      'Contributed to an AI-powered banking platform generating ~$400M in revenue for clients across South and Southeast Asia, delivering personalized financial experiences at scale.',
-    tags: ['AI', 'Cloud', 'Banking', 'DevOps'],
+      'Banks across South and Southeast Asia needed personalized financial experiences, but compliance constraints ruled out off-the-shelf AI. I owned delivery and reliability across multi-tenant client deployments — where downtime was simply not an option.',
+    takeaway: 'At scale, infrastructure is the product. Latency and uptime are product decisions.',
+    tags: ['AI Platform', 'Multi-tenant', 'Banking', 'Delivery'],
   },
   {
-    title: 'Cloud Cost Optimization',
+    title: 'Cloud Cost Governance',
     description:
-      'Automated cost-visibility tools reducing cloud infrastructure costs by 40%, providing granular spend analytics and rightsizing recommendations across multi-cloud environments.',
-    tags: ['AWS', 'Azure', 'Automation', 'Cost Optimization'],
+      'Cloud spend was outpacing revenue growth with no per-client visibility into where money was going. I shipped automated cost-visibility tooling with rightsizing recommendations. The tradeoff: automation required upfront tagging discipline, but manual audits wouldn\'t scale.',
+    takeaway: 'The cost of inaction was compounding monthly. Invest in tooling, not workarounds. Outcome: 40% cost reduction.',
+    tags: ['Cost Governance', 'Automation', 'Multi-cloud', 'Analytics'],
   },
   {
     title: 'Multi-Cloud Re-Architecture',
     description:
-      'Re-architected a core recommendation platform into a cloud-agnostic multi-cloud solution (AWS, Azure, GCP, OCI + CDN), improving global latency by 30% and achieving <100ms API response.',
-    tags: ['AWS', 'Azure', 'GCP', 'Multi-Cloud'],
+      'A single-cloud dependency was both a reliability risk and a pricing risk. I led the re-architecture of our core recommendation engine to cloud-agnostic design across AWS, Azure, GCP, and OCI with a CDN layer — trading operational complexity for resilience and negotiating leverage.',
+    takeaway: 'Complexity is only worth adding if it solves a problem you can\'t solve otherwise. Outcome: 30% latency improvement, <100ms API response.',
+    tags: ['Architecture Decision', 'Multi-cloud', 'Resilience', 'Tradeoffs'],
   },
   {
-    title: 'CI/CD Developer Productivity Platform',
+    title: 'Developer Productivity Platform',
     description:
-      'Built CI/CD and IaC platforms increasing deployment velocity by 60% and reducing client onboarding time by 60%, enabling rapid infrastructure provisioning and delivery.',
-    tags: ['CI/CD', 'Terraform', 'Ansible', 'Jenkins'],
+      'Engineers were spending more time on manual provisioning than building. I standardized CI/CD and IaC across the org, enabling self-service delivery for internal teams and new clients. One early call shaped everything: standardize before the org grows too large to change.',
+    takeaway: 'Productivity tooling is a force multiplier. One hour saved per engineer per day compounds fast. Outcome: 60% faster deployments, 60% faster client onboarding.',
+    tags: ['Developer Productivity', 'Platform', 'IaC', 'Standardization'],
   },
   {
-    title: 'Secure AI-Enabled Customer Onboarding',
+    title: 'AI-Enabled KYC Onboarding — Tier-1 African Bank',
     description:
-      'Led end-to-end delivery of a secure AI-enabled onboarding application for a Tier-1 African bank, streamlining KYC and reducing onboarding friction significantly.',
-    tags: ['AI', 'Security', 'Banking', 'Cloud'],
+      'No prior playbook existed for compliant AI-assisted KYC in this regulatory environment. I led end-to-end delivery, coordinating across security, cloud, and product teams. The hardest calls weren\'t technical — they were about what to cut to meet the launch date without compromising compliance.',
+    takeaway: 'Cross-functional delivery in regulated markets is about scope triage, not just execution.',
+    tags: ['End-to-end Delivery', 'Regulated Markets', 'Cross-functional', 'AI'],
   },
   {
     title: 'Human Body Fatigue Measuring Device',
     description:
-      'Designed and fabricated a device to measure human body fatigue for COVID-19 detection at crowded workplaces, combining hardware sensing with data analysis.',
-    tags: ['Hardware', 'Product Design', 'Fabrication'],
+      'COVID-19 created an urgent need: scalable, non-invasive fatigue screening at crowded workplaces. I designed and fabricated a biometric device from scratch. The defining constraint: hardware has no patch cycle — prioritize ruthlessly before you build, not after.',
+    takeaway: 'Hardware forces honesty. You can\'t ship a fix after the fact.',
+    tags: ['Product Design', 'Hardware', 'Prototyping', 'Constraints'],
   },
   {
     title: 'Drilling Analysis of Magnesium MMCs',
     description:
-      'Experimental research project evaluating drilling characteristics of magnesium metal matrix composites with B4C reinforcement, analyzing tool wear and surface quality.',
-    tags: ['Research', 'Manufacturing', 'Materials'],
+      'Magnesium MMCs were emerging as lightweight manufacturing materials, but sparse machinability data created real adoption risk. I designed a controlled experiment evaluating tool wear, surface quality, and cutting parameters — applying the same logic I use in product work: define your variables, control what you can, be honest about what you can\'t.',
+    takeaway: 'Research design is product design. Define your constraints before you start.',
+    tags: ['Structured Research', 'Manufacturing', 'Experiment Design', 'Analysis'],
   },
 ]
 
@@ -72,9 +79,16 @@ function ProjectCard({ project, index }) {
         </h3>
 
         {/* Description */}
-        <p className="text-zinc-500 text-sm leading-relaxed flex-grow mb-5">
+        <p className="text-zinc-500 text-sm leading-relaxed flex-grow mb-4">
           {project.description}
         </p>
+
+        {/* Takeaway */}
+        {project.takeaway && (
+          <p className="text-zinc-600 text-xs italic leading-relaxed mb-5 border-t border-zinc-800 pt-4">
+            {project.takeaway}
+          </p>
+        )}
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -100,9 +114,9 @@ export default function Projects() {
             <p className="text-zinc-600 font-mono text-sm font-medium tracking-widest uppercase mb-3">
               Portfolio
             </p>
-            <h2 className="section-heading">Featured Projects</h2>
+            <h2 className="section-heading">Featured Work</h2>
             <p className="section-subheading max-w-2xl mx-auto">
-              A selection of work spanning cloud infrastructure, AI platforms, and engineering research.
+              Each project had a real constraint, a decision to make, and an outcome that mattered. Here's how I think through problems.
             </p>
           </div>
         </ScrollReveal>

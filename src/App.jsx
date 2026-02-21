@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Principles from './components/Principles'
 import Projects from './components/Projects'
 import Education from './components/Education'
 import Experience from './components/Experience'
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Principles />
         <Projects />
         <Education />
         <Experience />

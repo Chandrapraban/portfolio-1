@@ -9,28 +9,29 @@ const EXPERIENCE = [
     location: 'Remote / Durham, NC',
     period: 'Jan 2026 – Present',
     current: true,
+    logo: '/Cybrid-logo.png',
     bullets: [
-      'Driving UK market entry strategy for a stablecoin payments product',
-      'Leading competitive and customer analysis across business models, target verticals, pricing dynamics, and flow-of-funds use cases',
-      'Evaluating remittance and B2B payment corridors to prioritize high-impact launch markets',
+      'Own the competitive and customer analysis workstream for UK market entry of a stablecoin payments product — mapping business models, pricing dynamics, and flow-of-funds use cases across target verticals',
+      'Built a corridor prioritization framework to identify the highest-impact launch markets, balancing regulatory friction, TAM, and competitive density',
+      'Synthesizing findings into executive-ready recommendations that directly shape product and go-to-market decisions',
     ],
   },
   {
     company: 'Crayon Data',
-    role: 'DevOps Engineer',
+    role: 'Platform & Delivery Engineer',
     context: 'Chennai, India',
     location: 'Chennai, India',
     period: 'Nov 2022 – May 2025',
     current: false,
+    logo: '/Crayon-logo.png',
     bullets: [
-      'Contributed to an AI-integrated banking platform driving ~$400M in new revenue across client portfolios',
-      'Reduced cloud infrastructure costs by 40% through automated cost-visibility tools',
-      'Re-architected core recommendation platform to multi-cloud (AWS, Azure, GCP, OCI), improving global latency by 30% and achieving <100ms API response',
-      'Increased deployment velocity by 60% via CI/CD and IaC platforms; reduced client onboarding time by 60%',
-      'Cut average incident resolution time by 75% through standardized incident management',
-      'Reduced manual operational effort by 85%+ by scaling cloud automation standards',
-      'Led delivery of a secure AI-enabled onboarding application for a Tier-1 African bank',
-      'Owned disaster recovery strategy ensuring compliance with agreed RTO/RPO commitments',
+      'Owned delivery and reliability for an AI banking platform serving millions of customers across Asia and Africa — platform contributed to ~$400M in new revenue across client portfolios',
+      'Decided to re-architect the core recommendation engine to cloud-agnostic multi-cloud (AWS, Azure, GCP, OCI) — traded operational complexity for resilience and a 30% latency improvement, achieving <100ms API response',
+      'Shipped automated cloud cost-visibility tooling that cut infrastructure spend by 40% — chose automation over manual audits because the problem was compounding, not static',
+      'Built and standardized CI/CD and IaC platforms across the org — cut deployment time by 60% and client onboarding time by 60%; made self-service delivery possible at scale',
+      'Drove incident management standards that reduced average resolution time by 75% — making on-call predictable enough to retain engineers, not just fix incidents',
+      'Led end-to-end delivery of a secure AI-powered KYC application for a Tier-1 African bank — no prior playbook, coordinated across security, cloud, and product teams',
+      'Owned disaster recovery strategy and RTO/RPO commitments for a platform where downtime had direct financial and compliance consequences',
     ],
   },
   {
@@ -40,9 +41,10 @@ const EXPERIENCE = [
     location: 'Chennai, India',
     period: 'Mar 2022 – Oct 2022',
     current: false,
+    logo: '/Crayon-logo.png',
     bullets: [
-      'Developed data visualizations for customer spending behaviour analysis',
-      'Built tools for data cleaning, pattern matching, and automated image standardization for clients including HDFC, HSBC, ADIB, and Amex',
+      'Built customer spending behavior visualizations and analytics tools for HDFC, HSBC, ADIB, and Amex — developed early instinct for how data quality shapes decision quality',
+      'Shipped automated data cleaning, pattern-matching, and image standardization pipelines that reduced manual onboarding overhead for client deployments',
     ],
   },
   {
@@ -52,9 +54,10 @@ const EXPERIENCE = [
     location: 'Neyveli, India',
     period: 'Apr 2021 – May 2021',
     current: false,
+    logo: '/NLC-logo.png',
     bullets: [
-      'Assessed efficiency and cost impact of auxiliary high-pressure boiler outages on thermal power plant regenerative system',
-      'Identified approximately INR 2 Cr (~$250K USD) in excess costs from heater outages, providing actionable recommendations',
+      'Quantified the cost impact of auxiliary boiler outages on a thermal power regenerative system — identified ~$250K USD in excess annual costs',
+      'Delivered actionable recommendations to plant management; findings directly informed maintenance scheduling decisions',
     ],
   },
 ]
@@ -80,7 +83,12 @@ function TimelineItem({ exp, index, isLast }) {
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 sm:p-7 hover:border-zinc-700 transition-all duration-300 hover:shadow-xl hover:shadow-black/40">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
               <div>
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-2.5 mb-1">
+                  {exp.logo && (
+                    <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-white flex items-center justify-center overflow-hidden p-1">
+                      <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain" />
+                    </div>
+                  )}
                   <h3 className="text-lg font-bold text-white">{exp.company}</h3>
                   {exp.current && (
                     <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-white/10 text-white border border-white/15">
@@ -131,7 +139,7 @@ export default function Experience() {
             </p>
             <h2 className="section-heading">Work Experience</h2>
             <p className="section-subheading max-w-2xl mx-auto">
-              From cloud infrastructure and DevOps to consulting and data science — a track record of impact.
+              From shipping AI infrastructure at scale to advising on market entry strategy — a track record of owning outcomes, not just executing tasks.
             </p>
           </div>
         </ScrollReveal>

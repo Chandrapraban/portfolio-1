@@ -9,7 +9,7 @@ const EDUCATION = [
     period: 'Aug 2025 – May 2027',
     gpa: '3.8',
     gpaLabel: 'GPA',
-    logoText: 'DU',
+    logo: '/Duke-logo.png',
     coursework: [
       'Product Management',
       'Competitive Strategy',
@@ -34,7 +34,7 @@ const EDUCATION = [
     period: 'Aug 2018 – Jun 2022',
     gpa: '3.84',
     gpaLabel: 'First Class with Distinction',
-    logoText: 'SSN',
+    logo: '/SSN-logo.png',
     coursework: [
       'Machine Learning Applications',
       'Product Design and Development',
@@ -61,8 +61,8 @@ function EducationCard({ edu, index }) {
         <div className="p-6 sm:p-8 flex flex-col h-full">
           {/* School header */}
           <div className="flex items-start gap-4 mb-6">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10">
-              <span className="text-black font-bold text-xs tracking-tight">{edu.logoText}</span>
+            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10 overflow-hidden p-1.5">
+              <img src={edu.logo} alt={edu.school} className="w-full h-full object-contain" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white leading-tight">{edu.school}</h3>

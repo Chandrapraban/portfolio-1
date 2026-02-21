@@ -25,23 +25,23 @@ export default function Hero() {
         {/* Availability badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-sm text-zinc-400 mb-10 shadow-xl">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          Open to opportunities · Available May 2027
+          Open to full-time roles · Available May 2027
         </div>
 
         {/* Main heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6 text-balance">
-          Nice that you are here, I am{' '}
+          I'm{' '}
           <span className="gradient-text">Chandrapraban</span>
+          {' '}— I turn complex systems into shipped outcomes.
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl lg:text-2xl text-zinc-500 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
-          Aspiring{' '}
-          <span className="text-zinc-200 font-semibold">Project / Program Manager</span>
-          {' '}· Interested in{' '}
-          <span className="text-zinc-300 font-semibold">Product Management</span>
-          {' '}&amp;{' '}
-          <span className="text-zinc-300 font-semibold">Supply Chain Management</span>
+          <span className="text-zinc-200 font-semibold">Technical Program Manager</span>
+          {' '}·{' '}
+          <span className="text-zinc-300 font-semibold">Product Strategy</span>
+          {' '}·{' '}
+          <span className="text-zinc-300 font-semibold">Operations</span>
         </p>
 
         {/* Bio card */}
@@ -50,13 +50,12 @@ export default function Hero() {
             <Cpu size={18} className="text-black" />
           </div>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            Previously a{' '}
-            <span className="text-white font-semibold">DevOps Engineer</span>
-            {' '}with{' '}
-            <span className="text-white font-semibold">2.5+ years</span>
-            {' '}at{' '}
+            <span className="text-white font-semibold">2.5 years</span>
+            {' '}shipping AI-powered banking infrastructure to millions of customers across Asia and Africa at{' '}
             <span className="text-white font-semibold">Crayon Data</span>
-            {' '}— building AI-powered banking platforms and cloud infrastructure at scale.
+            {' '}— now at{' '}
+            <span className="text-white font-semibold">Duke's MEM program</span>
+            {' '}building the strategy and leadership skills to own the full product lifecycle.
           </p>
         </div>
 
