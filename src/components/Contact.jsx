@@ -62,6 +62,8 @@ function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
+  const [loading, setLoading] = useState(false)
+  const [sendError, setSendError] = useState('')
 
   const validate = () => {
     const errs = {}
@@ -77,11 +79,38 @@ function ContactForm() {
     if (errors[e.target.name]) setErrors((prev) => ({ ...prev, [e.target.name]: '' }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length > 0) { setErrors(errs); return }
-    setSubmitted(true)
+
+    setLoading(true)
+    setSendError('')
+
+    try {
+      const webhookUrl = import.meta.env.VITE_DISCORD_WEBHOOK_URL
+      await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          embeds: [{
+            title: 'New Portfolio Message',
+            color: 0xffffff,
+            fields: [
+              { name: 'Name', value: form.name, inline: true },
+              { name: 'Email', value: form.email, inline: true },
+              { name: 'Message', value: form.message },
+            ],
+            timestamp: new Date().toISOString(),
+          }],
+        }),
+      })
+      setSubmitted(true)
+    } catch {
+      setSendError('Failed to send. Please try again or email me directly.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -133,9 +162,10 @@ function ContactForm() {
         {errors.message && <p className="mt-1.5 text-xs text-rose-400">{errors.message}</p>}
       </div>
 
-      <button type="submit" className="w-full btn-primary justify-center py-3.5 text-base">
+      {sendError && <p className="text-xs text-rose-400">{sendError}</p>}
+      <button type="submit" disabled={loading} className="w-full btn-primary justify-center py-3.5 text-base disabled:opacity-50 disabled:cursor-not-allowed">
         <Send size={17} />
-        Send Message
+        {loading ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   )
