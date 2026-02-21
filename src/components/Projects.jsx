@@ -3,13 +3,6 @@ import ScrollReveal from './ScrollReveal'
 
 const PROJECTS = [
   {
-    title: 'AI Banking Platform — Scale & Revenue',
-    description:
-      'Banks across South and Southeast Asia needed personalized financial experiences, but compliance constraints ruled out off-the-shelf AI. I owned delivery and reliability across multi-tenant client deployments — where downtime was simply not an option.',
-    takeaway: 'At scale, infrastructure is the product. Latency and uptime are product decisions.',
-    tags: ['AI Platform', 'Multi-tenant', 'Banking', 'Delivery'],
-  },
-  {
     title: 'Cloud Cost Governance',
     description:
       'Cloud spend was outpacing revenue growth with no per-client visibility into where money was going. I shipped automated cost-visibility tooling with rightsizing recommendations. The tradeoff: automation required upfront tagging discipline, but manual audits wouldn\'t scale.',
@@ -29,13 +22,6 @@ const PROJECTS = [
       'Engineers were spending more time on manual provisioning than building. I standardized CI/CD and IaC across the org, enabling self-service delivery for internal teams and new clients. One early call shaped everything: standardize before the org grows too large to change.',
     takeaway: 'Productivity tooling is a force multiplier. One hour saved per engineer per day compounds fast. Outcome: 60% faster deployments, 60% faster client onboarding.',
     tags: ['Developer Productivity', 'Platform', 'IaC', 'Standardization'],
-  },
-  {
-    title: 'AI-Enabled KYC Onboarding — Tier-1 African Bank',
-    description:
-      'No prior playbook existed for compliant AI-assisted KYC in this regulatory environment. I led end-to-end delivery, coordinating across security, cloud, and product teams. The hardest calls weren\'t technical — they were about what to cut to meet the launch date without compromising compliance.',
-    takeaway: 'Cross-functional delivery in regulated markets is about scope triage, not just execution.',
-    tags: ['End-to-end Delivery', 'Regulated Markets', 'Cross-functional', 'AI'],
   },
   {
     title: 'Human Body Fatigue Measuring Device',
