@@ -36,7 +36,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/60 shadow-xl shadow-black/20'
+          ? 'bg-black/90 backdrop-blur-md border-b border-zinc-800/60 shadow-xl shadow-black/40'
           : 'bg-transparent'
       }`}
     >
@@ -46,13 +46,13 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2.5 group"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-violet-500 flex items-center justify-center shadow-lg shadow-sky-500/20">
-              <Code2 size={16} className="text-white" />
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg shadow-white/10">
+              <Code2 size={16} className="text-black" />
             </div>
-            <span className="font-bold text-slate-100 group-hover:text-sky-400 transition-colors duration-200">
-              CP
+            <span className="font-bold text-zinc-100 group-hover:text-white transition-colors duration-200">
+              Chandrapraban
             </span>
           </a>
 
@@ -68,29 +68,22 @@ export default function Navbar() {
                   onClick={(e) => handleNavClick(e, href)}
                   className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? 'text-sky-400'
-                      : 'text-slate-400 hover:text-slate-100'
+                      ? 'text-white'
+                      : 'text-zinc-500 hover:text-zinc-200'
                   }`}
                 >
                   {label}
                   {isActive && (
-                    <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-sky-400" />
+                    <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white" />
                   )}
                 </a>
               )
             })}
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')}
-              className="ml-3 btn-primary text-xs px-4 py-2"
-            >
-              Hire Me
-            </a>
           </nav>
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-zinc-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg text-zinc-500 hover:text-zinc-100 hover:bg-zinc-900 transition-colors duration-200"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -105,7 +98,7 @@ export default function Navbar() {
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800/60 px-4 py-4 space-y-1">
+        <div className="bg-black/95 backdrop-blur-md border-t border-zinc-800/60 px-4 py-4 space-y-1">
           {NAV_LINKS.map(({ label, href }) => {
             const id = href.replace('#', '')
             const isActive = activeSection === id
@@ -116,8 +109,8 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, href)}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   isActive
-                    ? 'text-sky-400 bg-sky-500/10'
-                    : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
+                    ? 'text-white bg-white/8'
+                    : 'text-zinc-500 hover:text-zinc-100 hover:bg-zinc-900'
                 }`}
               >
                 {label}
