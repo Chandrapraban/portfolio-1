@@ -1,4 +1,4 @@
-import { ArrowDown, ChevronRight, Briefcase, Cpu } from 'lucide-react'
+import { ArrowDown, ChevronRight, Briefcase } from 'lucide-react'
 
 export default function Hero() {
   const scrollTo = (id) => {
@@ -21,20 +21,25 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+        {/* Profile picture */}
+        <div className="flex justify-center mb-8">
+          <div className="w-28 h-28 rounded-full border-2 border-zinc-700 overflow-hidden shadow-2xl shadow-black/60">
+            <img
+              src="/profile pic.png"
+              alt="Chandrapraban"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* Availability badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-sm text-zinc-400 mb-10 shadow-xl">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          Open to full-time roles · Available May 2027
+          Open to Summer 2026 internship &amp; co-op opportunities
         </div>
 
         {/* Main heading */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6 text-balance">
-          I'm{' '}
-          <span className="gradient-text">Chandrapraban</span>
-          {' '}— I turn complex systems into shipped outcomes.
-        </h1>
-
         {/* Subtitle */}
         <p className="text-lg sm:text-xl lg:text-2xl text-zinc-500 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
           <span className="text-zinc-200 font-semibold">Technical Program Manager</span>
@@ -46,11 +51,14 @@ export default function Hero() {
 
         {/* Bio card */}
         <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 px-5 sm:px-6 py-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm text-left max-w-2xl mx-auto mb-12 shadow-2xl">
-          <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-lg shadow-white/10">
-            <Cpu size={18} className="text-black" />
+          <div className="flex-shrink-0 w-10 h-10 rounded-full border border-zinc-700 overflow-hidden shadow-lg">
+            <img src="/profile pic.png" alt="Chandrapraban" className="w-full h-full object-cover" />
           </div>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            <span className="text-white font-semibold">2.5 years</span>
+            I'm{' '}
+            <span className="text-white font-semibold">Chandrapraban</span>
+            {' '}— I have{' '}
+            <span className="text-white font-semibold">2.5 years of experience</span>
             {' '}shipping AI-powered banking infrastructure to millions of customers across Asia and Africa at{' '}
             <span className="text-white font-semibold">Crayon Data</span>
             {' '}— now at{' '}

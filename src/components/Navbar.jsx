@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Code2 } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useActiveSection } from '../hooks/useScrollAnimation'
 
 const NAV_LINKS = [
@@ -49,8 +49,8 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center gap-2.5 group"
           >
-            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-lg shadow-white/10">
-              <Code2 size={16} className="text-black" />
+            <div className="w-8 h-8 rounded-full border border-zinc-700 overflow-hidden shadow-lg shadow-black/40">
+              <img src="/profile pic.png" alt="Chandrapraban" className="w-full h-full object-cover" />
             </div>
             <span className="font-bold text-zinc-100 group-hover:text-white transition-colors duration-200">
               Chandrapraban

@@ -200,7 +200,7 @@ export default function Contact() {
               <div className="mt-8 pt-6 border-t border-zinc-800">
                 <div className="flex items-center gap-3 text-sm text-zinc-500">
                   <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse flex-shrink-0" />
-                  <span>Available for full-time roles starting May 2027</span>
+                  <span>Open to Summer 2026 internship &amp; co-op opportunities</span>
                 </div>
               </div>
             </div>
